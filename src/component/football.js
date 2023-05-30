@@ -33,7 +33,7 @@ const Football = () => {
       <HeaderContainer>
         <Header>ATHLETS</Header>
       </HeaderContainer>
-      <ImageContainer><img src={Footballer}/></ImageContainer>
+      {/* <ImageContainer><img src={Footballer}/></ImageContainer> */}
       <div>
         <Information
           backgroundColor={'#F2F2F2'}

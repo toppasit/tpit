@@ -3,21 +3,22 @@ import styled from "styled-components";
 const InfoBackground = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: ${props => props.left ? 'flex-start' : 'flex-end'};
   justify-content: center;
   background-color: ${props => props.bgColor};
-  height: ${props => props.height}
+  height: ${props => props.height};
 `
 
 const InfoWrapper = styled.div`
   width: 50%;
   color: ${props => props.color};
+  margin-left: ${props => props.left ? '322px' : '0'};
 `
 
 const TitleContainer = styled.div`
   display: flex;
   align-items: center;
-  color: black;
+  color: #000000;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -32,6 +33,7 @@ const BulletContainer = styled.div`
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 1.5px;
+  color: ${props => props.bulletColor ? props.bulletColor : '#000000'};
 `
 
 const BulletLine = styled.div`
@@ -57,13 +59,13 @@ const Info = styled.p`
 `
 
 const Information = ({
-  backgroundColor, height, textColor, order, bulletLineColor, title, info
+  left, backgroundColor, height, textColor, order, bulletColor, bulletLineColor, title, info
 }) => {
   return (
-    <InfoBackground bgColor={backgroundColor} height={height}>
-      <InfoWrapper color={textColor}>
+    <InfoBackground bgColor={backgroundColor} height={height} left={left}>
+      <InfoWrapper color={textColor} left={left}>
         <TitleContainer>
-          <BulletContainer>
+          <BulletContainer bulletColor={bulletColor}>
             {order}
             <BulletLine bgColor={bulletLineColor}/>
           </BulletContainer>

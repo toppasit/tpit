@@ -10,7 +10,8 @@ const FootballContainer = styled.div`
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
+  margin-left: 322px;
 `
 
 const Header = styled.h1`
@@ -31,34 +32,38 @@ const Basketball = () => {
   return (
     <FootballContainer>
       <HeaderContainer>
-        <Header>ATHLETS</Header>
+        <Header>PLAYERS</Header>
       </HeaderContainer>
-      <ImageContainer><img src={BasketballPlayer}/></ImageContainer>
+      {/* <ImageContainer><img src={BasketballPlayer}/></ImageContainer> */}
       <div>
         <Information
+          left={true}
           backgroundColor={'#F2F2F2'}
-          height={'345px'}
+          height={'485px'}
           order={'01'}
           bulletLineColor={'#603EBE'}
           title={'CONNECTION'}
-          info={'Connect with coaches directly, you can ping coaches to view profile.'}
+          info={'Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.'}
         />
         <Information
+          left={true}
           backgroundColor={'#F5F4F9'}
-          height={'256px'}
+          height={'245px'}
           order={'02'}
           bulletLineColor={'#603EBE'}
           title={'COLLABORATION'}
-          info={'Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.'}
+          info={'Work with recruiter to increase your chances of finding talented athlete.'}
         />
         <Information
-          backgroundColor={'#5E3DB3'}
-          height={'302px'}
+          left={true}
+          backgroundColor={'#090C35'}
+          height={'268px'}
           textColor={'#FFFFFF'}
           order={'03'}
+          bulletColor={'#8F6BE8'}
           bulletLineColor={'#FFFFFF'}
           title={'GROWTH'}
-          info={'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc'}
+          info={'Save your time, recruit proper athlets for your team.'}
         />
       </div>
     </FootballContainer>

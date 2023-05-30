@@ -8,8 +8,7 @@ import Mainpage from './page/mainpage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    {/* <App /> */}
-    <Mainpage/>
+    <App/>
   </div>
 );
 

@@ -1,6 +1,10 @@
+@font-face {
+  font-family: 'roboto';
+  src: url(/src/asset/Roboto/Roboto-Regular.ttf);
+}
+
 .App {
   text-align: center;
-  font-family: "roboto";
   background-color: #F2F2F2;
 }
 

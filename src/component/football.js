@@ -1,8 +1,10 @@
 import styled from 'styled-components'
-import Cat from '../asset/cat.png'
+import Information from './information'
+import Footballer from '../asset/footballer.png'
 
 const FootballContainer = styled.div`
   background-color: #F2F2F2;
+  font-family: roboto;
 `
 
 const HeaderContainer = styled.div`
@@ -14,45 +16,15 @@ const HeaderContainer = styled.div`
 const Header = styled.h1`
   width: 50%;
   color: #E7E7E7;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 105px;
 `
 
 const ImageContainer = styled.div`
-  float: left;
   position: absolute;
-  top: 0;
-`
-
-const InfoBackground = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  background-color: ${props => props.bgColor};
-  height: ${props => props.height}
-`
-
-const InfoWrapper = styled.div`
-  width: 50%;
-  color: ${props => props.color};
-`
-
-const TitleContainer = styled.div`
-  display: flex;
-  align-items: center;
-  color: black;
-`
-
-const BulletLine = styled.div`
-  height: 5px;
-  width: 19px;
-  background-color: ${props => props.bgColor};
-  border-radius: 2.5px;
-  margin: 0 12px 0 0;
-`
-
-const Title = styled.h2`
-  color: #C2C2C2;
-  letter-spacing: 1.5px;
+  left: 175px;
+  top: 35px;
 `
 
 const Football = () => {
@@ -61,44 +33,33 @@ const Football = () => {
       <HeaderContainer>
         <Header>ATHLETS</Header>
       </HeaderContainer>
-      <ImageContainer><img src={Cat} width={'300px'}/></ImageContainer>
+      <ImageContainer><img src={Footballer}/></ImageContainer>
       <div>
-        <InfoBackground>
-          <InfoWrapper>
-            <TitleContainer>
-              <div>
-                01
-                <BulletLine bgColor={'#603EBE'}/>
-              </div>
-              <Title>CONNECTION</Title>
-            </TitleContainer>
-            <p>Connect with coaches directly, you can ping coaches to view profile.</p>
-          </InfoWrapper>
-        </InfoBackground>
-        <InfoBackground bgColor={'##F5F4F9'} height={'256px'}>
-          <InfoWrapper>
-            <TitleContainer>
-              <div>
-                02
-                <BulletLine bgColor={'#603EBE'}/>
-              </div>
-              <Title>COLLABORATION</Title>
-            </TitleContainer>
-            <p>Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.</p>
-          </InfoWrapper>
-        </InfoBackground>
-        <InfoBackground bgColor={'#5E3DB3'} height={'302px'}>
-          <InfoWrapper color={'white'}>
-            <TitleContainer>
-              <div>
-                03
-                <BulletLine bgColor={'#FFFFFF'}/>
-              </div>
-              <Title>GROWTH</Title>
-            </TitleContainer>
-            <p>Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc </p>
-          </InfoWrapper>
-        </InfoBackground>
+        <Information
+          backgroundColor={'#F2F2F2'}
+          height={'345px'}
+          order={'01'}
+          bulletLineColor={'#603EBE'}
+          title={'CONNECTION'}
+          info={'Connect with coaches directly, you can ping coaches to view profile.'}
+        />
+        <Information
+          backgroundColor={'#F5F4F9'}
+          height={'256px'}
+          order={'02'}
+          bulletLineColor={'#603EBE'}
+          title={'COLLABORATION'}
+          info={'Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.'}
+        />
+        <Information
+          backgroundColor={'#5E3DB3'}
+          height={'302px'}
+          textColor={'#FFFFFF'}
+          order={'03'}
+          bulletLineColor={'#FFFFFF'}
+          title={'GROWTH'}
+          info={'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc'}
+        />
       </div>
     </FootballContainer>
   )

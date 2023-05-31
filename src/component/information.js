@@ -56,12 +56,12 @@ const Info = styled.p`
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
-  letter-spacing: 0.93px;
-  max-width: 717px;
+  letter-spacing: ${props => props.letterSpace ? props.letterSpace : '0'};
+  max-width: ${props => props.maxWidth ? props.maxWidth : '717px'};
 `
 
 const Information = ({
-  left, backgroundColor, height, textColor, order, bulletColor, bulletLineColor, title, info
+  left, backgroundColor, height, textColor, order, bulletColor, bulletLineColor, title, info, letterSpace, maxWidth,
 }) => {
   return (
     <InfoBackground bgColor={backgroundColor} height={height} left={left}>
@@ -73,7 +73,7 @@ const Information = ({
           </BulletContainer>
           <Title>{title}</Title>
         </TitleContainer>
-        <Info>{info}</Info>
+        <Info letterSpace={letterSpace} maxWidth={maxWidth}>{info}</Info>
       </InfoWrapper>
     </InfoBackground>
   )

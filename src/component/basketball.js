@@ -45,6 +45,7 @@ const Basketball = () => {
           bulletLineColor={'#603EBE'}
           title={'CONNECTION'}
           info={'Connect with talented athlete directly, you can watch their skills through video showreels directly from Surface 1.'}
+          maxWidth={'571px'}
         />
         <Information
           left={true}
@@ -54,6 +55,7 @@ const Basketball = () => {
           bulletLineColor={'#603EBE'}
           title={'COLLABORATION'}
           info={'Work with recruiter to increase your chances of finding talented athlete.'}
+          letterSpace={'0.65px'}
         />
         <Information
           left={true}
@@ -65,6 +67,7 @@ const Basketball = () => {
           bulletLineColor={'#FFFFFF'}
           title={'GROWTH'}
           info={'Save your time, recruit proper athlets for your team.'}
+          letterSpace={'0.65px'}
         />
       </div>
     </FootballContainer>

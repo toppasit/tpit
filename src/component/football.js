@@ -55,6 +55,7 @@ const Football = () => {
           bulletLineColor={'#603EBE'}
           title={'COLLABORATION'}
           info={'Work with other student athletes to increase visability. When you share and like other players videos it will increase your visability as a player. This is the team work aspect to Surface 1.'}
+          letterSpace={'0.93px'}
         />
         <Information
           backgroundColor={'#5E3DB3'}
@@ -64,6 +65,7 @@ const Football = () => {
           bulletLineColor={'#FFFFFF'}
           title={'GROWTH'}
           info={'Resources and tools for you to get better as a student Athelte. Access to training classes, tutor sessions, etc'}
+          letterSpace={'0.93px'}
         />
       </div>
     </FootballContainer>

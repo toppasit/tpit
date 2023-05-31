@@ -3,8 +3,12 @@ import Information from './information'
 import Footballer from '../asset/footballer.png'
 
 const FootballContainer = styled.div`
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
   font-family: roboto;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
 `
 
 const HeaderContainer = styled.div`
@@ -19,6 +23,7 @@ const Header = styled.h1`
   font-weight: 400;
   font-size: 90px;
   line-height: 105px;
+  margin: 24px 0 0;
 `
 
 const ImageContainer = styled.div`
@@ -33,11 +38,11 @@ const Football = () => {
       <HeaderContainer>
         <Header>ATHLETS</Header>
       </HeaderContainer>
-      {/* <ImageContainer><img src={Footballer}/></ImageContainer> */}
+      <ImageContainer><img src={Footballer}/></ImageContainer>
       <div>
         <Information
-          backgroundColor={'#F2F2F2'}
-          height={'345px'}
+          backgroundColor={'#FFFFFF'}
+          height={'216px'}
           order={'01'}
           bulletLineColor={'#603EBE'}
           title={'CONNECTION'}

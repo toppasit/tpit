@@ -3,7 +3,7 @@ import Information from "./information";
 import BasketballPlayer from '../asset/basketball-player.png'
 
 const FootballContainer = styled.div`
-  background-color: #F2F2F2;
+  background-color: #FFFFFF;
   font-family: roboto;
 `
 
@@ -20,12 +20,13 @@ const Header = styled.h1`
   font-weight: 400;
   font-size: 90px;
   line-height: 105px;
+  margin: 124px 0 0;
 `
 
 const ImageContainer = styled.div`
-  position: relative;
-  left: 175px;
-  top: 35px;
+  position: absolute;
+  left: 804px;
+  top: 898px;
 `
 
 const Basketball = () => {
@@ -34,12 +35,12 @@ const Basketball = () => {
       <HeaderContainer>
         <Header>PLAYERS</Header>
       </HeaderContainer>
-      {/* <ImageContainer><img src={BasketballPlayer}/></ImageContainer> */}
+      <ImageContainer><img src={BasketballPlayer}/></ImageContainer>
       <div>
         <Information
           left={true}
-          backgroundColor={'#F2F2F2'}
-          height={'485px'}
+          backgroundColor={'#FFFFFF'}
+          height={'256px'}
           order={'01'}
           bulletLineColor={'#603EBE'}
           title={'CONNECTION'}

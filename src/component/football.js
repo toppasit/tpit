@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import Information from './information'
 import Footballer from '../asset/footballer.png'
 import FootballConfig from '../information/football'
@@ -57,8 +57,11 @@ const ImageContainer = styled.div`
   @media only screen and (max-width: 320px) {
     top: 0;
     left: 0;
-    margin: 70px 50px 0 70px;
-    display: block;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 11px 0 0 0;
+    z-index: 2;
   }
 `
 
@@ -74,25 +77,21 @@ const Img = styled.img`
   }
 `
 
-const slideAnimation = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+const Slideshow = styled.div`
+  @media only screen and (max-width: 320px) {
+    height: 229;
   }
 `
 
 const Slides = styled.div`
   @media only screen and (max-width: 320px) {
+    position: relative;
+    top: -55px;
     display: flex;
     transition: transform 0.5s ease-in-out;
     transform: translateX(-${(props) => props.slideIndex * 100}%);
   }
 `
-
 
 const DotsContainer = styled.div`
   display: none;
@@ -101,7 +100,7 @@ const DotsContainer = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -28px;
+    top: -100px;
   }
 `
 
@@ -109,12 +108,12 @@ const Dot = styled.span`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: #D8D8D8;
   margin: 0 5px;
   cursor: pointer;
 
   &.active {
-    background-color: #333;
+    background-color: #603EBE;
   }
 `
 
@@ -131,8 +130,8 @@ const Football = ({
       <HeaderContainer>
         <Header>ATHLETS</Header>
       </HeaderContainer>
-      {/* <ImageContainer><Img src={Footballer}/></ImageContainer> */}
-      <div>
+      <ImageContainer><Img src={Footballer}/></ImageContainer>
+      <Slideshow>
         <Slides slideIndex={slideIndex}>
           <Information
             backgroundColor={'#FFFFFF'}
@@ -183,10 +182,11 @@ const Football = ({
           ></Dot>
           <Dot
             className={slideIndex === 2 ? 'active' : ''}
+            lightPurple={false}
             onClick={() => goToSlide(2)}
           ></Dot>
         </DotsContainer>
-      </div>
+      </Slideshow>
     </FootballContainer>
   )
 }

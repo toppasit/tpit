@@ -26,6 +26,7 @@ const InfoBackground = styled.div`
     height: 284px;
     animation: ${slideAnimation} 0.5s ease-in-out;
     align-items: flex-start;
+    justify-content: flex-start;
     &.active {
       display: flex;
     }
@@ -58,6 +59,10 @@ const TitleContainer = styled.div`
   line-height: 21px;
   letter-spacing: 1.5px;
   line-height: 42px;
+
+  @media only screen and (max-width: 320px) {
+    margin: 72px 0 0 0;
+  }
 `
 
 const BulletContainer = styled.div`
@@ -69,6 +74,11 @@ const BulletContainer = styled.div`
   line-height: 21px;
   letter-spacing: 1.5px;
   color: ${props => props.bulletColor ? props.bulletColor : '#000000'};
+
+  @media only screen and (max-width: 320px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
 `
 
 const BulletLine = styled.div`
@@ -77,6 +87,10 @@ const BulletLine = styled.div`
   background-color: ${props => props.bgColor};
   border-radius: 2.5px;
   margin: 4px 0 0 0;
+
+  @media only screen and (max-width: 320px) {
+    height: 4px;
+  }
 `
 
 const Title = styled.h2`
@@ -86,6 +100,11 @@ const Title = styled.h2`
   line-height: 42px;
   letter-spacing: 1.5px;
   margin: 0;
+
+  @media only screen and (max-width: 320px) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 `
 
 const Info = styled.p`
@@ -98,13 +117,17 @@ const Info = styled.p`
   @media only screen and (max-width: 768px) {
     font-size: 18px;
   }
+
+  @media only screen and (max-width: 320px) {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.74px;
+  }
 `
 
 const Information = ({
   left, backgroundColor, height, textColor, order, bulletColor, bulletLineColor, title, info, letterSpace, maxWidth, index, slideIndex,
 }) => {
-  console.log('maxWidth', maxWidth)
-  console.log(slideIndex, index)
   return (
     <InfoBackground bgColor={backgroundColor} height={height} left={left} className={slideIndex === index ? 'active' : ''}>
       <InfoWrapper color={textColor} left={left}>

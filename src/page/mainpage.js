@@ -15,7 +15,7 @@ const Mainpage = () => {
   return (
     <>
       <Football windowType={windowType}/>
-      {/* <Basketball windowType={windowType}/> */}
+      <Basketball windowType={windowType}/>
       {/* <Test/> */}
     </>
   )

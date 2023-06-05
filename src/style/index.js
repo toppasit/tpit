@@ -7,13 +7,13 @@ export const Container = styled.div`
 `
 
 export const Slideshow = styled.div`
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     height: ${props => props.height};
   }
 `
 
 export const Slides = styled.div`
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     position: relative;
     top: ${props => props.top};
     display: flex;
@@ -24,7 +24,7 @@ export const Slides = styled.div`
 
 export const DotsContainer = styled.div`
   display: none;
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     display: flex;
     justify-content: center;
     align-items: center;

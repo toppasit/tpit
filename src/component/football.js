@@ -7,7 +7,7 @@ import FootballConfig from '../information/football'
 import { changeSlide } from '../util'
 
 const Football = ({
-  windowType,
+  windowType, windowWidth,
 }) => {
   const [slideIndex, setSlideIndex] = useState(0)
   return (
@@ -15,7 +15,7 @@ const Football = ({
       <HeaderContainer>
         <Header>ATHLETS</Header>
       </HeaderContainer>
-      <ImageContainer><Img src={Footballer}/></ImageContainer>
+      <ImageContainer imgLeft={windowWidth}><Img src={Footballer}/></ImageContainer>
       <Slideshow height={'229px'}>
         <Slides slideIndex={slideIndex} top={'-55px'}>
           {

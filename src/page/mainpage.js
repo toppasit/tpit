@@ -18,8 +18,8 @@ const Mainpage = () => {
   const windowType = getWindowType(windowWidth)
   return (
     <>
-      <Football windowType={windowType}/>
-      <Basketball windowType={windowType}/>
+      <Football windowType={windowType} windowWidth={windowWidth}/>
+      <Basketball windowType={windowType} windowWidth={windowWidth}/>
     </>
   )
 }

@@ -18,16 +18,16 @@ export const InfoBackground = styled.div`
   justify-content: center;
   background-color: ${props => props.bgColor};
   height: ${props => props.height};
-  min-width: 100%;
+  overflow: hidden;
+  width: 100%;
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     width: calc(100% - 19px);
     flex: 0 0 100%;
     height: 284px;
     animation: ${slideAnimation} 0.5s ease-in-out;
     align-items: flex-start;
     justify-content: flex-start;
-    min-width: 320px;
     &.active {
       display: flex;
     }
@@ -35,7 +35,7 @@ export const InfoBackground = styled.div`
 `
 
 export const InfoWrapper = styled.div`
-  width: 50%;
+  width: 47%;
   color: ${props => props.color};
   margin-left: ${props => props.left ? '322px' : '0'};
 
@@ -44,7 +44,7 @@ export const InfoWrapper = styled.div`
     margin-left: ${props => props.left ? '33px' : '0'};
   }
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     width: calc(100% - 19px);
     animation: ${slideAnimation} 0.5s ease-in-out;
     margin: 0 0 0 19px;
@@ -61,7 +61,7 @@ export const TitleContainer = styled.div`
   letter-spacing: 1.5px;
   line-height: 42px;
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     margin: 72px 0 0 0;
   }
 `
@@ -76,7 +76,7 @@ export const BulletContainer = styled.div`
   letter-spacing: 1.5px;
   color: ${props => props.bulletColor ? props.bulletColor : '#000000'};
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     font-size: 14px;
     line-height: 16px;
   }
@@ -89,7 +89,7 @@ export const BulletLine = styled.div`
   border-radius: 2.5px;
   margin: 4px 0 0 0;
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     height: 4px;
   }
 `
@@ -102,7 +102,7 @@ export const Title = styled.h2`
   letter-spacing: 1.5px;
   margin: 0;
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     font-size: 28px;
     line-height: 33px;
   }
@@ -119,7 +119,7 @@ export const Info = styled.p`
     font-size: 18px;
   }
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     font-size: 15px;
     line-height: 18px;
     letter-spacing: 0.74px;

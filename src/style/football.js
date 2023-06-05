@@ -5,7 +5,7 @@ export const HeaderContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     margin: 0 0 0 19px;
     align-items: flex-start;
   }
@@ -23,7 +23,7 @@ export const Header = styled.h1`
     margin: 81px 99px 0 0;
   }
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     margin: 0;
     font-size: 50px;
     line-height: 58.59px;
@@ -32,15 +32,15 @@ export const Header = styled.h1`
 
 export const ImageContainer = styled.div`
   position: absolute;
-  left: 175px;
+  left: ${props => props.imgLeft-1745}px;
   top: 35px;
 
   @media only screen and (max-width: 768px) {
-    left: -161px;
+    left: ${props => props.imgLeft-929}px;
     top: 121px;
   }
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     top: 0;
     left: 0;
     position: relative;
@@ -57,7 +57,7 @@ export const Img = styled.img`
     height: 699px;
   }
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 414px) {
     width: 200px;
     height: 281px;
   }

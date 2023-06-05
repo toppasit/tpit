@@ -7,7 +7,7 @@ import BasketballConfig from '../information/basketball'
 import { changeSlide } from '../util'
 
 const Basketball = ({
-  windowType,
+  windowType, windowWidth,
 }) => {
   const [slideIndex, setSlideIndex] = useState(0)
   return (
@@ -15,13 +15,14 @@ const Basketball = ({
       <HeaderContainer>
         <Header>PLAYERS</Header>
       </HeaderContainer>
-      <ImageContainer><Img src={BasketballPlayer}/></ImageContainer>
+      <ImageContainer windowWidth={windowWidth}><Img src={BasketballPlayer}/></ImageContainer>
       <Slideshow height={'203px'}>
         <Slides slideIndex={slideIndex} top={'-35px'}>
           {
             BasketballConfig[windowType].map((basketball, index) => {
               return (
                 <Information
+                  key={index}
                   left={basketball.left}
                   backgroundColor={basketball.backgroundColor}
                   textColor={basketball.textColor}
@@ -45,6 +46,7 @@ const Basketball = ({
             BasketballConfig[windowType].map((v, index) => {
               return (
                 <Dot
+                  key={index}
                   className={slideIndex === index ? 'active' : ''}
                   activeBgColor={'#603EBE'}
                   onClick={() => changeSlide(index, setSlideIndex)}

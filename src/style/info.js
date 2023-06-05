@@ -36,6 +36,7 @@ export const InfoBackground = styled.div`
 
 export const InfoWrapper = styled.div`
   width: 47%;
+  max-width: 912px;
   color: ${props => props.color};
   margin-left: ${props => props.left ? '322px' : '0'};
 

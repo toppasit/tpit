@@ -12,7 +12,8 @@ export const HeaderContainer = styled.div`
 `
 
 export const Header = styled.h1`
-  width: 50%;
+  width: 47%;
+  max-width: 912px;
   color: #E7E7E7;
   font-weight: 400;
   font-size: 90px;

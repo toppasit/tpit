@@ -18,7 +18,7 @@ export const InfoBackground = styled.div`
   justify-content: center;
   background-color: ${props => props.bgColor};
   height: ${props => props.height};
-  width: 100vw;
+  min-width: 100%;
 
   @media only screen and (max-width: 320px) {
     width: calc(100% - 19px);

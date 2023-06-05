@@ -16,9 +16,6 @@ const Mainpage = () => {
   }, [])
 
   const windowType = getWindowType(windowWidth)
-  // desktop 1920 1867
-  // tablet 768 1609
-  // mobile 320 1133
   return (
     <>
       <Football windowType={windowType}/>

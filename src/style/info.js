@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components'
 
-const slideAnimation = keyframes`
+export const slideAnimation = keyframes`
   0% {
     opacity: 0;
     transform: translateX(-50px);
@@ -11,7 +11,7 @@ const slideAnimation = keyframes`
   }
 `
 
-const InfoBackground = styled.div`
+export const InfoBackground = styled.div`
   display: flex;
   flex-direction: column;
   align-items: ${props => props.left ? 'flex-start' : 'flex-end'};
@@ -27,13 +27,14 @@ const InfoBackground = styled.div`
     animation: ${slideAnimation} 0.5s ease-in-out;
     align-items: flex-start;
     justify-content: flex-start;
+    min-width: 320px;
     &.active {
       display: flex;
     }
   }
 `
 
-const InfoWrapper = styled.div`
+export const InfoWrapper = styled.div`
   width: 50%;
   color: ${props => props.color};
   margin-left: ${props => props.left ? '322px' : '0'};
@@ -50,7 +51,7 @@ const InfoWrapper = styled.div`
   }
 `
 
-const TitleContainer = styled.div`
+export const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   color: #000000;
@@ -65,7 +66,7 @@ const TitleContainer = styled.div`
   }
 `
 
-const BulletContainer = styled.div`
+export const BulletContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 12px 0 0;
@@ -81,7 +82,7 @@ const BulletContainer = styled.div`
   }
 `
 
-const BulletLine = styled.div`
+export const BulletLine = styled.div`
   height: 5px;
   width: 100%;
   background-color: ${props => props.bgColor};
@@ -93,7 +94,7 @@ const BulletLine = styled.div`
   }
 `
 
-const Title = styled.h2`
+export const Title = styled.h2`
   color: #C2C2C2;
   font-weight: 400;
   font-size: 36px;
@@ -107,7 +108,7 @@ const Title = styled.h2`
   }
 `
 
-const Info = styled.p`
+export const Info = styled.p`
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
@@ -124,24 +125,4 @@ const Info = styled.p`
     letter-spacing: 0.74px;
   }
 `
-
-const Information = ({
-  left, backgroundColor, height, textColor, order, bulletColor, bulletLineColor, title, info, letterSpace, maxWidth, index, slideIndex,
-}) => {
-  return (
-    <InfoBackground bgColor={backgroundColor} height={height} left={left} className={slideIndex === index ? 'active' : ''}>
-      <InfoWrapper color={textColor} left={left}>
-        <TitleContainer>
-          <BulletContainer bulletColor={bulletColor}>
-            {order}
-            <BulletLine bgColor={bulletLineColor}/>
-          </BulletContainer>
-          <Title>{title}</Title>
-        </TitleContainer>
-        <Info letterSpace={letterSpace} maxWidth={maxWidth}>{info}</Info>
-      </InfoWrapper>
-    </InfoBackground>
-  )
-}
-
-export default Information
+export default InfoBackground

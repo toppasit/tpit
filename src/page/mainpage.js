@@ -1,13 +1,20 @@
-import { useRef } from "react"
-import styled from "styled-components"
+import { useEffect, useState } from "react"
 import Football from "../component/football"
 import Basketball from "../component/basketball"
-import Test from '../component/test'
 import { getWindowType } from '../util'
 
 const Mainpage = () => {
-  const windowInnerWidth = useRef([window.innerWidth])
-  const windowWidth = windowInnerWidth.current[0]
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   const windowType = getWindowType(windowWidth)
   // desktop 1920 1867
   // tablet 768 1609
@@ -16,7 +23,6 @@ const Mainpage = () => {
     <>
       <Football windowType={windowType}/>
       <Basketball windowType={windowType}/>
-      {/* <Test/> */}
     </>
   )
 }

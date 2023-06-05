@@ -4,8 +4,8 @@ export const getWindowType = (width) => {
   else return 'desktop'
 }
 
-export const changeSlide = () => {
-  
+export const changeSlide = (index, setState) => {
+  setState(index)
 }
 
 export default getWindowType
